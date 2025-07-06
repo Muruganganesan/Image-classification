@@ -5,15 +5,26 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
 import tensorflow as tf
+import gdown
+import os
 
 # Title
 st.title("🐟 Fish Species Classifier (CNN Model)")
 st.markdown("Upload a fish image and this model will predict the species.")
 
-# Load the trained model
+# Load the trained model from Google Drive
 @st.cache_resource
 def load_cnn_model():
-    model = load_model("cnn_fish_model.h5")
+    model_path = "cnn_fish_model.h5"
+
+    # Check if model already downloaded
+    if not os.path.exists(model_path):
+        # Replace with your file ID
+        file_id = "1lOXRwwEc2H2IJzvwvCLDvMGxv2E96t9F"
+        url = f"https://drive.google.com/uc?export=download&id={file_id}"
+        gdown.download(url, model_path, quiet=False)
+
+    model = load_model(model_path)
     return model
 
 model = load_cnn_model()

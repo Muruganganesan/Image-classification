@@ -22,11 +22,11 @@ def load_cnn_model():
         # Replace with your file ID
         file_id = "1lOXRwwEc2H2IJzvwvCLDvMGxv2E96t9F"
         url = f"https://drive.google.com/uc?export=download&id={file_id}"
-        gdown.download(url, model_path, quiet=False)
+        gdown.download(url, model_path, quiet=False, fuzzy=True)
 
     model = load_model(model_path)
     return model
-
+#gdown.download(url, model_path, quiet=False, fuzzy=True)
 model = load_cnn_model()
 
 # Define class names (update as per your dataset)

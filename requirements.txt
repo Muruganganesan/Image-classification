@@ -1,10 +1,10 @@
 streamlit
+tensorflow
+gdown
+numpy
+pillow
 torch
 torchvision
 scikit-learn
 matplotlib
 seaborn
-pillow
-numpy
-gdown
-tensorflow

@@ -1,10 +1,10 @@
-streamlit
-tensorflow
+streamlit==1.28.1
+tensorflow-cpu==2.11.0            # CPU பதிப்பு
 gdown
-numpy
-pillow
-torch
-torchvision
-scikit-learn
-matplotlib
-seaborn
+numpy>=1.24.0
+pillow>=10.0.0
+torch==2.1.0+cpu
+torchvision==0.15.2+cpu
+scikit-learn>=1.4.0
+matplotlib>=3.7.0
+seaborn>=0.13.0

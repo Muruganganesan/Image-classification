@@ -7,3 +7,4 @@ seaborn
 pillow
 numpy
 gdown
+tensorflow

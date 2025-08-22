@@ -8,7 +8,7 @@ import tensorflow as tf
 import gdown
 import os
 
-# Title
+# Title muru
 st.title("🐟 Fish Species Classifier (CNN Model)")
 st.markdown("Upload a fish image and this model will predict the species.")
 
@@ -55,3 +55,4 @@ if uploaded_file is not None:
     st.markdown("### 🧠 Prediction Result")
     st.success(f"Predicted Fish Species: **{predicted_class}**")
     st.info(f"Confidence: **{confidence*100:.2f}%**")
+
